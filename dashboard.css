@@ -1,0 +1,360 @@
+* {
+    font-family: "Titillium Web";
+}
+
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.wrapper {
+    width: 99vw;
+    height: 96vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+        "media title title led-controls"
+        "rain-detect title title led-controls"
+        "temp-detect gas-chart gas-chart led-lamps"
+        "humid-detect gas-chart gas-chart gas-detect"
+        "temp-chart temp-chart humid-chart humid-chart"
+        "temp-chart temp-chart humid-chart humid-chart";
+    grid-gap: 0.5em;
+    border-radius: 7px;
+}
+
+.box:not(.profile):not(.led-lamps) {
+    border-radius: 7px;
+    border: 3px solid black;
+    background-color: #f5f5f5;
+}
+
+/* * BOX SETUP */
+.profile {
+    grid-area: media;
+}
+
+.rain-detect {
+    grid-area: rain-detect;
+}
+
+.title {
+    grid-area: title;
+}
+
+.led-controls {
+    grid-area: led-controls;
+}
+
+.temp-detect {
+    grid-area: temp-detect;
+}
+
+.humid-detect {
+    grid-area: humid-detect;
+}
+
+.gas-chart {
+    grid-area: gas-chart;
+}
+
+.led-lamps {
+    grid-area: led-lamps;
+}
+
+.gas-detect {
+    grid-area: gas-detect;
+}
+
+.temp-chart {
+    grid-area: temp-chart;
+}
+
+.humid-chart {
+    grid-area: humid-chart;
+}
+
+/* * NAME AND SOCIAL */
+
+.profile {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name,
+.profile-social {
+    height: 50%;
+}
+
+.profile-name {
+    background-color: #A66FB5;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    font-weight: 500;
+    border-radius: 7px;
+    border: 3px solid black;
+    color: white;
+}
+
+.profile-social {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-link {
+    padding: 0 9px;
+    height: 100%;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 2.5em;
+    border: 3px solid;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #f5f5f5;
+}
+
+.social-link .fa-envelope,
+.social-link .fa-linkedin,
+.social-link .fa-square-instagram,
+.social-link .fa-square-github,
+.social-link .fa-square-x-twitter {
+    transition: color 0.3s;
+}
+
+/* ** LinkedIn Button */
+.linkedin {
+    border-color: #0077B5;
+}
+
+.linkedin .fa-linkedin {
+    color: #0077B5;
+}
+
+.linkedin:hover {
+    background-color: #0077B5;
+}
+
+/* ** Gmail Button */
+.gmail {
+    border-color: #c71610;
+}
+
+.gmail .fa-envelope {
+    color: #c71610;
+}
+
+.gmail:hover {
+    background-color: #c71610;
+}
+
+/* ** Instagram Button */
+.instagram {
+    border-color: #E1306C;
+}
+
+.instagram .fa-square-instagram {
+    color: #E1306C;
+}
+
+.instagram:hover {
+    background-color: #E1306C;
+}
+
+/* ** GitHub Button */
+.github {
+    border-color: #333;
+}
+
+.github .fa-square-github {
+    color: #333;
+}
+
+.github:hover {
+    background-color: #333;
+}
+
+/* ** Twitter Button */
+.twitter {
+    border-color: #000000;
+}
+
+.twitter .fa-square-x-twitter {
+    color: #000000;
+}
+
+.twitter:hover {
+    background-color: #000000;
+}
+
+/* ** Hover Effect for Icons */
+.social-link:hover .fa-envelope,
+.social-link:hover .fa-linkedin,
+.social-link:hover .fa-square-instagram,
+.social-link:hover .fa-square-github,
+.social-link:hover .fa-square-x-twitter {
+    color: white;
+}
+
+/* * TITLE */
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Tilt Warp";
+    font-size: 6.5em;
+}
+
+.led-controls{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-heading{
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.control-buttons{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-buttons .btn{
+    width: 100%;
+    height: 43px;
+    margin: 5px 0;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+    font-weight: 500;
+    border: 2.5px solid black;
+}
+
+.led-red:hover{
+    background-color: #FF6961;
+    color: white;
+}
+
+.led-green:hover{
+    background-color: #6FC276;
+    color: white;
+}
+
+.led-blue:hover{
+    background-color: #6488EA;
+    color: white;
+}
+
+.led-red.active{
+    background-color: #FF6961;
+    color: white;
+}
+
+.led-green.active{
+    background-color: #6FC276;
+    color: white;
+}
+
+.led-blue.active{
+    background-color: #6488EA;
+    color: white;
+}
+
+/* * LEDs LAMP */
+
+.led-lamps{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container{
+    width: 50%;
+    height: 95%;
+    background-color: #f5f5f5;
+    border: 2.5px solid black;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-red{
+    background-color: #FFEBEB;
+}
+
+.container-green{
+    margin: 0 10px;
+    background-color: #EBFFEB;
+}
+
+.container-blue{
+    background-color: #EBF4FF;
+}
+
+.lamp{
+    background-color: #eaeaea;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.lamp-red.active{
+    background-color: #FF6961;
+    box-shadow: 0 0 15px rgba(255, 105, 97, 0.7), /* Bayangan utama dengan warna yang sama */
+                0 0 30px rgba(255, 105, 97, 0.5); /* Bayangan luar untuk efek cahaya */
+}
+
+.lamp-green.active{
+    background-color: #6FC276;
+    box-shadow: 0 0 15px rgba(111, 194, 118, 0.7), /* Bayangan utama dengan warna yang sama */
+                0 0 30px rgba(111, 194, 118, 0.5); /* Bayangan luar untuk efek cahaya */
+}
+
+.lamp-blue.active{
+    background-color: #6488EA;
+    box-shadow: 0 0 15px rgba(100, 136, 234, 0.7), /* Bayangan utama dengan warna yang sama */
+                0 0 30px rgba(100, 136, 234, 0.5); /* Bayangan luar untuk efek cahaya */
+}
+
+/* * DETECT */
+.detect{
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.detect-heading{
+    margin: 0;
+    padding-left: 5px;
+    font-size: 16px;
+}
+
+.detect-value{
+    height: 100%;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 500;
+}
+
+
+

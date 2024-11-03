@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- * TITLE -->
+    <title>SmartSense</title>
+
+    <!-- * FAVICON -->
+    <link rel="shortcut icon" href="images/favicon-monitoring.png" type="image/x-icon">
+
+    <!-- * CSS -->
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!-- * FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/a26abf09f5.js" crossorigin="anonymous"></script>
+
+    <!-- * GOOGLE FONTS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tilt+Warp&display=swap"
+        rel="stylesheet">
+
+    <!-- * HIGHCHARTS -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- * General Info -->
+        <div class="box profile">
+            <div class="profile-name">Hello, I'm Ahmaaad!</div>
+            <div class="profile-social">
+                <a class="social-link linkedin"
+                    href="https://www.linkedin.com/in/muhammad-ahmad-9a1857266?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BMXJJsnr7TTi2IIdHrQN1IA%3D%3D"
+                    title="LinkedIn" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a class="social-link gmail" href="mailto:muhammadofc07@gmail.com" title="Gmail" target="_blank">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a class="social-link instagram" href="https://www.instagram.com/just.type_miguel/" title="Instagram" target="_blank">
+                    <i class="fa-brands fa-square-instagram"></i>
+                </a>
+                <a class="social-link github" href="https://github.com/call-me-ahmaaad" title="GitHub" target="_blank">
+                    <i class="fa-brands fa-square-github"></i>
+                </a>
+                <a class="social-link twitter" href="https://x.com/mhd_0710" title="X Twitter" target="_blank">
+                    <i class="fa-brands fa-square-x-twitter"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- * Title -->
+        <div class="box title">SmartSense</div>
+
+        <!-- * Sensor Value Monitoring -->
+        <div class="box detect rain-detect" id="container-rain">
+            <h3 class="detect-heading">
+                Rain Detection
+            </h3>
+            <div class="detect-value" id="rain-sensor">
+                RAIN
+            </div>
+        </div>
+        <div class="box detect temp-detect" id="container-temp">
+            <h3 class="detect-heading">
+                Temperature Detection
+            </h3>
+            <div class="detect-value" id="temp-sensor">
+                100°C
+            </div>
+        </div>
+        <div class="box detect humid-detect" id="container-humid">
+            <h3 class="detect-heading">
+                Humidity Detection
+            </h3>
+            <div class="detect-value" id="humid-sensor">
+                100%
+            </div>
+        </div>
+        <div class="box detect gas-detect" id="container-gas">
+            <h3 class="detect-heading">
+                Gas Detection
+            </h3>
+            <div class="detect-value" id="gas-sensor">
+                1000 ppm
+            </div>
+        </div>
+
+        <!-- * LEDs Control & Monitoring -->
+        <div class="box led-controls">
+            <h3 class="control-heading">LEDs Control</h3>
+            <div class="control-buttons">
+                <button class="btn led-red" id="led-red">RED</button>
+                <button class="btn led-green" id="led-green">GREEN</button>
+                <button class="btn led-blue" id="led-blue">BLUE</button>
+            </div>
+        </div>
+
+        <div class="box led-lamps">
+            <div class="container container-red">
+                <div class="lamp lamp-red" id="lamp-red"></div>
+            </div>
+            <div class="container container-green">
+                <div class="lamp lamp-green" id="lamp-green"></div>
+            </div>
+            <div class="container container-blue">
+                <div class="lamp lamp-blue" id="lamp-blue"></div>
+            </div>
+        </div>
+
+        <!-- * Sensor Chart Monitoring -->
+        <div class="box chart gas-chart" id="chart-gas">GAS CHART</div>
+        <div class="box chart temp-chart" id="chart-temp">TEMP CHART</div>
+        <div class="box chart humid-chart" id="chart-humid">HUMID CHART</div>
+    </div>
+
+    <!-- * JAVASCRIPT -->
+    <script src="sensor.js"></script>
+    <script src="led-control.js"></script>
+</body>
+
+</html>
